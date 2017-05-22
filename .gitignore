@@ -1,0 +1,8 @@
+# boyleGu env
+py3_6env
+activate
+
+# sanic log
+access.log
+error.log
+
