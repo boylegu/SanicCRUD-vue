@@ -1,6 +1,7 @@
 # boyleGu env
 py3_6env
 activate
+.idea
 
 # sanic log
 access.log
