@@ -12,3 +12,5 @@ activate
 access.log
 error.log
 
+# frontend
+node_modules
