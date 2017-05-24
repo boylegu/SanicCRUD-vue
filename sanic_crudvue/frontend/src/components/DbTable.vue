@@ -12,41 +12,41 @@
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="server_type"
-                    label="server_type"
+                    prop="username"
+                    label="username"
                     width="120">
             </el-table-column>
             <el-table-column
-                    prop="server_id"
-                    label="server_id"
+                    prop="email"
+                    label="email"
                     width="120">
             </el-table-column>
             <el-table-column
-                    prop="config_name"
-                    label="config_name"
+                    prop="phone"
+                    label="phone"
                     width="130">
             </el-table-column>
             <el-table-column
-                    prop="warning"
-                    label="warning"
+                    prop="sex"
+                    label="sex"
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="critical"
-                    label="critical"
+                    prop="zone"
+                    label="zone"
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="description"
-                    label="description"
+                    prop="create_datetime"
+                    label="create_datetime"
                     width="300">
             </el-table-column>
             <el-table-column
                     fixed="right"
-                    label="操作"
+                    label="Operation"
                     width="100">
                 <template scope="scope">
-                    <el-button @click="editItem(scope.$index, tableData)" type="text" size="large">编辑</el-button>
+                    <el-button @click="editItem(scope.$index, tableData)" type="text" size="large">Edit</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -67,7 +67,7 @@
         data(){
             return {
                 tableData: [],
-                apiUrl: 'http://127.0.0.1:8000/xxx/core/api/config-list',
+                apiUrl: 'http://127.0.0.1:8000/api/shanghai/person',
                 total: 0,
                 pageSize: 10,
                 currentPage: 1,
@@ -84,7 +84,7 @@
             this.getCustomers();
             Bus.$on('filterResultData', (data) => {
                 this.tableData = data.results;
-                this.total = data.total;
+                this.total = data.total_pages;
                 this.pageSize = data.count;
                 this.description = data.description;
                 this.server_type = data.server_type;
