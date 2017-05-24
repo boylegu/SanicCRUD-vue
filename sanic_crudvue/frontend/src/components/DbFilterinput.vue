@@ -2,7 +2,7 @@
     <el-form :inline="true" :model="formInline">
 
         <el-form-item label="类型">
-            <el-select v-model="formInline.server_type" clearable placeholder="请选择类型"
+            <el-select v-model="formInline.server_type" clearable placeholder="select user"
                        v-on:visible-change="selectDemo">
                 <el-option
                         v-for="item in type_options"
