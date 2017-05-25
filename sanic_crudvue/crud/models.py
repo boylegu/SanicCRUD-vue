@@ -10,8 +10,8 @@ class BaseModel(Model):
     class Meta:
         database = db
         indexes = (
-            # create a unique on username and email
-            (('username', 'email'), True),
+            # create a no-unique on username and email
+            (('sex', 'email'), False),
         )
 
     @classmethod
