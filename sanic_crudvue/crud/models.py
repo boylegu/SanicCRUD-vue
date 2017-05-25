@@ -9,6 +9,10 @@ db = SqliteDatabase('info.db')
 class BaseModel(Model):
     class Meta:
         database = db
+        indexes = (
+            # create a no-unique on username and email
+            (('sex', 'email'), False),
+        )
 
     @classmethod
     def all(cls):
