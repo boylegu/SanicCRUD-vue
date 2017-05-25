@@ -1,2 +1,2 @@
 sanic==0.5.4
-sanic-crud==0.2.4
+peewee==2.10.1
