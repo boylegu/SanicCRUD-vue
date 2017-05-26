@@ -1,8 +1,8 @@
 <template>
     <el-form :inline="true" :model="formInline">
 
-        <el-form-item label="类型">
-            <el-select v-model="formInline.server_type" clearable placeholder="select user"
+        <el-form-item label="Sex">
+            <el-select v-model="formInline.server_type" clearable placeholder="select sex"
                        v-on:visible-change="selectDemo">
                 <el-option
                         v-for="item in type_options"
@@ -49,7 +49,7 @@
         methods: {
             selectDemo: function (params) {
                 if (params) {
-                    axios.get("http://127.0.0.1:8000/xxxx/core/api/all-servertype")
+                    axios.get("http://127.0.0.1:8000/api/persons/sex")
                         .then((response) => {
                             this.type_options = response.data;
                             console.log(response.data);

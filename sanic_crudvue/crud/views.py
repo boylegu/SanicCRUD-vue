@@ -1,7 +1,9 @@
 from sanic.response import json
 from sanic import Blueprint
 from sanic.views import HTTPMethodView
+
 from crud.models import ShanghaiPersonInfo
+from .helper import list_remove_repeat
 
 crud_bp = Blueprint(
     'crud',
@@ -22,10 +24,10 @@ class PersonsInfoView(HTTPMethodView):
              })
 
 
-class UsernameListView(HTTPMethodView):
+class SexListView(HTTPMethodView):
     async def get(self, request):
-        return json(ShanghaiPersonInfo.values_list('username'))
+        return json(list_remove_repeat(ShanghaiPersonInfo.values_list('sex')))
 
 
 crud_bp.add_route(PersonsInfoView.as_view(), '')
-crud_bp.add_route(UsernameListView.as_view(), '/name')
+crud_bp.add_route(SexListView.as_view(), '/sex')
