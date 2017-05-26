@@ -10,8 +10,16 @@ crud_bp = Blueprint(
 
 
 class PersonsInfoView(HTTPMethodView):
-    async def get(self, request):
-        return json(ShanghaiPersonInfo.all())
+    async def get(self, request,  *args, **kwargs):
+        page = int(request.args.get('page',1))
+        sex, email = request.args.get('sex'), request.args.get('email')
+
+        return json(
+            {'results': ShanghaiPersonInfo.all(page, 5),
+             'count': 5,
+             'page': page,
+             'total': ShanghaiPersonInfo.select().count()
+             })
 
 
 class UsernameListView(HTTPMethodView):
@@ -19,5 +27,5 @@ class UsernameListView(HTTPMethodView):
         return json(ShanghaiPersonInfo.values_list('username'))
 
 
-crud_bp.add_route(PersonsInfoView.as_view(), '/')
+crud_bp.add_route(PersonsInfoView.as_view(), '')
 crud_bp.add_route(UsernameListView.as_view(), '/name')
