@@ -67,7 +67,7 @@
         data(){
             return {
                 tableData: [],
-                apiUrl: 'http://127.0.0.1:8000/api/shanghai/person',
+                apiUrl: 'http://127.0.0.1:8000/api/persons',
                 total: 0,
                 pageSize: 10,
                 currentPage: 1,
