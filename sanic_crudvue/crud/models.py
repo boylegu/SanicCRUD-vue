@@ -15,8 +15,8 @@ class BaseModel(Model):
         )
 
     @classmethod
-    def all(cls):
-        data = cls.select().iterator()
+    def all(cls, page_number=1, items_per_page=20):
+        data = cls.select().order_by(cls.id).paginate(page_number, items_per_page).iterator()
         return [model_to_dict(row) for row in data]
 
     @classmethod
