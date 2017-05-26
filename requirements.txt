@@ -1,2 +1,3 @@
 sanic==0.5.4
+Sanic-Cors==0.5.4.1
 peewee==2.10.1
