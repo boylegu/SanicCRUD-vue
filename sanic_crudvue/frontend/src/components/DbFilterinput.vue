@@ -2,7 +2,7 @@
     <el-form :inline="true" :model="formInline">
 
         <el-form-item label="Sex">
-            <el-select v-model="formInline.server_type" clearable placeholder="select sex"
+            <el-select v-model="formInline.sex" clearable placeholder="select sex"
                        v-on:visible-change="selectDemo">
                 <el-option
                         v-for="item in type_options"
@@ -12,12 +12,12 @@
             </el-select>
         </el-form-item>
 
-        <el-form-item v-if='formInline.server_type' label="Description">
-            <el-input v-model="formInline.description" placeholder="请输入相关描述"></el-input>
+        <el-form-item v-if='formInline.sex' label="Description">
+            <el-input v-model="formInline.email" placeholder="Please input suffix of email"></el-input>
         </el-form-item>
 
-        <el-form-item v-else='formInline.server_type' label="Description">
-            <el-input v-model="formInline.description" disabled placeholder="请输入相关描述"></el-input>
+        <el-form-item v-else='formInline.sex' label="Description">
+            <el-input v-model="formInline.email" disabled placeholder="Please input suffix of email"></el-input>
         </el-form-item>
 
     </el-form>
@@ -34,16 +34,16 @@
             return {
                 type_options: [],
                 formInline: {
-                    server_type: '',
-                    description: ''
+                    sex: '',
+                    email: ''
                 },
                 formLabelWidth: '120px'
             }
         },
 
         watch: {
-            'formInline.server_type': 'filterResultData',
-            'formInline.description': 'filterResultData'
+            'formInline.sex': 'filterResultData',
+            'formInline.email': 'filterResultData'
         },
 
         methods: {
@@ -63,12 +63,12 @@
                 function () {
                     axios.get("http://127.0.0.1:8000/xxx/core/api/config-list", {
                         params: {
-                            server_type: this.formInline.server_type,
-                            description: this.formInline.description
+                            server_type: this.formInline.sex,
+                            description: this.formInline.email
                         }
                     }).then((response) => {
-                        response.data['server_type'] = this.formInline.server_type;
-                        response.data['description'] = this.formInline.description;
+                        response.data['server_type'] = this.formInline.sex;
+                        response.data['description'] = this.formInline.email;
                         Bus.$emit('filterResultData', response.data);
                         console.log(response.data);
                     }).catch(function (response) {
