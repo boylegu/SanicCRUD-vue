@@ -61,14 +61,14 @@
             },
             filterResultData: _.debounce(
                 function () {
-                    axios.get("http://127.0.0.1:8000/xxx/core/api/config-list", {
+                    axios.get("http://127.0.0.1:8000/api/persons", {
                         params: {
-                            server_type: this.formInline.sex,
-                            description: this.formInline.email
+                            sex: this.formInline.sex,
+                            email: this.formInline.email
                         }
                     }).then((response) => {
-                        response.data['server_type'] = this.formInline.sex;
-                        response.data['description'] = this.formInline.email;
+                        response.data['sex'] = this.formInline.sex;
+                        response.data['email'] = this.formInline.email;
                         Bus.$emit('filterResultData', response.data);
                         console.log(response.data);
                     }).catch(function (response) {

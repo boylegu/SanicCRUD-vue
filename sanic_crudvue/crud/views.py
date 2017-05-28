@@ -17,11 +17,13 @@ class PersonsInfoView(HTTPMethodView):
         sex, email = request.args.get('sex'), request.args.get('email')
 
         return json(
-            {'results': ShanghaiPersonInfo.all(page, 5),
-             'count': 5,
-             'page': page,
-             'total': ShanghaiPersonInfo.select().count()
-             })
+            {
+                'results': ShanghaiPersonInfo.filters(sex=sex, email=email, page_number=page, items_per_page=5),
+                'count': 5,
+                'page': page,
+                'total': ShanghaiPersonInfo.select().count()
+            }
+        )
 
 
 class SexListView(HTTPMethodView):

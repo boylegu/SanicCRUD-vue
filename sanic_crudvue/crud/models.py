@@ -15,8 +15,20 @@ class BaseModel(Model):
         )
 
     @classmethod
-    def all(cls, page_number=1, items_per_page=20):
-        data = cls.select().order_by(cls.id).paginate(page_number, items_per_page).iterator()
+    def filters(cls, sex=None, email=None, page_number=1, items_per_page=20):
+        # data = cls.select().order_by(cls.id).paginate(page_number, items_per_page).iterator()
+        data = cls.select().where(cls.sex == sex, cls.email.contains(email)).order_by(cls.id).paginate(page_number,
+                                                                                                       items_per_page).iterator()
+        if not sex and not email:
+            qs = cls.select()
+        elif sex and email:
+            qs = cls.select().where(cls.sex == sex, cls.email.contains(email))
+        elif sex:
+            qs = cls.select().where(cls.sex == sex)
+        elif email:
+            qs = cls.select().where(cls.email.contains(email))
+
+        data = qs.order_by(cls.id).paginate(page_number, items_per_page).iterator()
         return [model_to_dict(row) for row in data]
 
     @classmethod
