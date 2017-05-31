@@ -1,7 +1,6 @@
 import datetime
 
-from peewee import CharField, DateTimeField, SqliteDatabase, Model, TextField
-from playhouse.shortcuts import model_to_dict
+from peewee import CharField, DateTimeField, SqliteDatabase, TextField, Model
 
 db = SqliteDatabase('info.db')
 
@@ -17,8 +16,6 @@ class BaseModel(Model):
     @classmethod
     def filters(cls, sex=None, email=None, page_number=1, items_per_page=20):
         # data = cls.select().order_by(cls.id).paginate(page_number, items_per_page).iterator()
-        data = cls.select().where(cls.sex == sex, cls.email.contains(email)).order_by(cls.id).paginate(page_number,
-                                                                                                       items_per_page).iterator()
         if not sex and not email:
             qs = cls.select()
         elif sex and email:
@@ -27,9 +24,12 @@ class BaseModel(Model):
             qs = cls.select().where(cls.sex == sex)
         elif email:
             qs = cls.select().where(cls.email.contains(email))
+        cls.result = qs.order_by(cls.id).paginate(page_number, items_per_page)
+        return cls  # [model_to_dict(row) for row in data]
 
-        data = qs.order_by(cls.id).paginate(page_number, items_per_page).iterator()
-        return [model_to_dict(row) for row in data]
+    @classmethod
+    def counts(cls):
+        return cls.result.count()
 
     @classmethod
     def values_list(cls, *args, **kwargs):
@@ -39,6 +39,7 @@ class BaseModel(Model):
             for row in eval(qs_expression):
                 result.append(eval('row.{0}'.format(arg)))
         return result
+
 
 
 class ShanghaiPersonInfo(BaseModel):

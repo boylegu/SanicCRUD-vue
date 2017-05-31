@@ -64,7 +64,7 @@
                     axios.get("http://127.0.0.1:8000/api/persons", {
                         params: {
                             sex: this.formInline.sex,
-                            email: this.formInline.email
+                            email: this.formInline.email,
                         }
                     }).then((response) => {
                         response.data['sex'] = this.formInline.sex;
