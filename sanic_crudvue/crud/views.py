@@ -3,6 +3,7 @@ from sanic import Blueprint
 from sanic.views import HTTPMethodView
 from playhouse.shortcuts import model_to_dict
 
+from config import base_config
 from crud.models import ShanghaiPersonInfo
 from .helper import list_remove_repeat
 
@@ -16,13 +17,14 @@ class PersonsInfoView(HTTPMethodView):
     async def get(self, request, *args, **kwargs):
         page = int(request.args.get('page', 1))
         sex, email = request.args.get('sex'), request.args.get('email')
-        qs = ShanghaiPersonInfo.filters(sex=sex, email=email, page_number=page, items_per_page=5)
-        result = [model_to_dict(row) for row in qs.result]
+        qs = ShanghaiPersonInfo.filters(sex=sex, email=email, page_number=page,
+                                        items_per_page=base_config.MAXP_PER_PAGE)
+        result = [model_to_dict(row) for row in qs.result.iterator()]
 
         return json(
             {
                 'results': result,
-                'count': 5,
+                'count': base_config.MAXP_PER_PAGE,
                 'page': page,
                 'total': ShanghaiPersonInfo.filters(sex=sex, email=email).counts()
             }
