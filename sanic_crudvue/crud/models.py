@@ -15,7 +15,6 @@ class BaseModel(Model):
 
     @classmethod
     def filters(cls, sex=None, email=None, page_number=1, items_per_page=20):
-        # data = cls.select().order_by(cls.id).paginate(page_number, items_per_page).iterator()
         if not sex and not email:
             qs = cls.select()
         elif sex and email:
