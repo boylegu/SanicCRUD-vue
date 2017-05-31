@@ -71,8 +71,8 @@
                 total: 0,
                 pageSize: 10,
                 currentPage: 1,
-                server_type: '',
-                description: '',
+                sex: '',
+                email: '',
                 dialogFormVisible: false,
                 form: '',
             }
@@ -86,8 +86,8 @@
                 this.tableData = data.results;
                 this.total = data.total_pages;
                 this.pageSize = data.count;
-                this.description = data.description;
-                this.server_type = data.server_type;
+                this.email = data.email;
+                this.sex = data.sex;
 
             });
         },
@@ -102,8 +102,8 @@
                 axios.get(this.apiUrl, {
                     params: {
                         page: this.currentPage,
-                        server_type: this.server_type,
-                        description: this.description
+                        sex: this.sex,
+                        email: this.email
                     }
                 }).then((response) => {
                     this.tableData = response.data.results;
