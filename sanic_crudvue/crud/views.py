@@ -13,7 +13,7 @@ crud_bp = Blueprint(
 )
 
 
-class PersonsInfoView(HTTPMethodView):
+class PersonsInfoListView(HTTPMethodView):
     async def get(self, request, *args, **kwargs):
         page = int(request.args.get('page', 1))
         sex, email = request.args.get('sex'), request.args.get('email')
@@ -31,6 +31,15 @@ class PersonsInfoView(HTTPMethodView):
         )
 
 
+class PersonsInfoDetailView(HTTPMethodView):
+    async def get(self, request, item_id):
+        data = ShanghaiPersonInfo.get(id=item_id)
+        return json(model_to_dict(data))
+
+    async def put(self, request, item_id):
+        pass
+
+
 class SexListView(HTTPMethodView):
     async def get(self, request):
         unique_list = list_remove_repeat(ShanghaiPersonInfo.values_list('sex'))
@@ -38,5 +47,6 @@ class SexListView(HTTPMethodView):
         return json(result)
 
 
-crud_bp.add_route(PersonsInfoView.as_view(), '')
+crud_bp.add_route(PersonsInfoListView.as_view(), '')
+crud_bp.add_route(PersonsInfoDetailView.as_view(), '/detail/<item_id>')
 crud_bp.add_route(SexListView.as_view(), '/sex')

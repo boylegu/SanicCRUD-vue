@@ -121,7 +121,7 @@
             editItem: function (index, rows) {
                 this.dialogFormVisible = true;
                 const itemId = rows[index].id;
-                const idurl = 'http://127.0.0.1:8000/xxxx/core/api/config-detail/' + itemId;
+                const idurl = 'http://127.0.0.1:8000/api/persons/detail/' + itemId;
                 axios.get(idurl).then((response) => {
                     this.form = response.data;
                 }).catch(function (response) {

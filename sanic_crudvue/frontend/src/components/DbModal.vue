@@ -4,26 +4,26 @@
             <el-form-item label="item_id" :label-width="formLabelWidth">
                 <el-input :disabled="true" v-model="form.id" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="server_type" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.server_type" auto-complete="off"></el-input>
+            <el-form-item label="username" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.username" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="server_id" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.server_id" auto-complete="off"></el-input>
+            <el-form-item label="email" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.email" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="config_name" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.config_name" auto-complete="off"></el-input>
+            <el-form-item label="phone" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.phone" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="warning" :label-width="formLabelWidth">
-                <el-input v-model="form.warning" auto-complete="off"></el-input>
+            <el-form-item label="sex" :label-width="formLabelWidth">
+                <el-input v-model="form.sex" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="critical" :label-width="formLabelWidth">
-                <el-input v-model="form.critical" auto-complete="off"></el-input>
+            <el-form-item label="zone" :label-width="formLabelWidth">
+                <el-input v-model="form.zone" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="description" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.description" auto-complete="off"></el-input>
+            <el-form-item label="create_datetime" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.create_datetime" auto-complete="off"></el-input>
             </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
