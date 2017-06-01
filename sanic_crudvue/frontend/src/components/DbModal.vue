@@ -4,26 +4,26 @@
             <el-form-item label="item_id" :label-width="formLabelWidth">
                 <el-input :disabled="true" v-model="form.id" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="server_type" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.server_type" auto-complete="off"></el-input>
+            <el-form-item label="username" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.username" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="server_id" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.server_id" auto-complete="off"></el-input>
+            <el-form-item label="email" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.email" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="config_name" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.config_name" auto-complete="off"></el-input>
+            <el-form-item label="phone" :label-width="formLabelWidth">
+                <el-input v-model="form.phone" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="warning" :label-width="formLabelWidth">
-                <el-input v-model="form.warning" auto-complete="off"></el-input>
+            <el-form-item label="sex" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.sex" auto-complete="off"></el-input>
             </el-form-item>
-            <el-form-item label="critical" :label-width="formLabelWidth">
-                <el-input v-model="form.critical" auto-complete="off"></el-input>
+            <el-form-item label="zone" :label-width="formLabelWidth">
+                <el-input v-model="form.zone" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="description" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.description" auto-complete="off"></el-input>
+            <el-form-item label="create_datetime" :label-width="formLabelWidth">
+                <el-input :disabled="true" v-model="form.create_datetime" auto-complete="off"></el-input>
             </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
@@ -48,19 +48,11 @@
         methods: {
             updateForm: function (formName) {
                 let itemId = formName.id;
-                let server_id = formName.server_id;
-                let server_type = formName.server_type;
-                let config_name = formName.config_name;
-                let warning = formName.warning;
-                let critical = formName.critical;
-                let description = formName.description;
-                axios.put('http://127.0.0.1:8000/xxx/core/api/config-detail/' + itemId, {
-                    config_name: config_name,
-                    server_id: server_id,
-                    server_type: server_type,
-                    warning: warning,
-                    critical: critical,
-                    description: description
+                let phone = formName.phone;
+                let zone = formName.zone;
+                axios.put('http://127.0.0.1:8000/api/persons/detail/' + itemId, {
+                    phone: phone,
+                    zone: zone
                 })
                     .then(function (response) {
                         console.log(response);
