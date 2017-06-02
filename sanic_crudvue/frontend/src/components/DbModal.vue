@@ -22,9 +22,6 @@
                 <el-input v-model="form.zone" auto-complete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="create_datetime" :label-width="formLabelWidth">
-                <el-input :disabled="true" v-model="form.create_datetime" auto-complete="off"></el-input>
-            </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
             <el-button :plain="true" type="danger" v-on:click="canclemodal">取消</el-button>

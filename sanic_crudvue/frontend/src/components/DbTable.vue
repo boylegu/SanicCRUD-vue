@@ -39,7 +39,8 @@
             <el-table-column
                     prop="create_datetime"
                     label="create_datetime"
-                    width="300">
+                    width="300"
+                    :formatter="formatter">
             </el-table-column>
             <el-table-column
                     fixed="right"
@@ -62,6 +63,8 @@
     import axios from 'axios'
     import Bus from '../eventBus'
     import DbModal from './DbModal.vue'
+
+    import * as moment from 'moment';
 
     export default {
         data(){
@@ -127,6 +130,11 @@
                 }).catch(function (response) {
                     console.log(response)
                 });
+            },
+
+            formatter(row, column) {
+                let data = moment.unix(row.create_datetime);
+                return data.format('YYYY-MM-DD HH:mm:ss')
             },
         }
     }
