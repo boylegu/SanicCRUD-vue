@@ -15,6 +15,7 @@ class BaseModel(Model):
 
     @classmethod
     def filters(cls, sex=None, email=None, page_number=1, items_per_page=20):
+        """this filter code for example demo"""
         if not sex and not email:
             qs = cls.select()
         elif sex and email:
@@ -24,7 +25,7 @@ class BaseModel(Model):
         elif email:
             qs = cls.select().where(cls.email.contains(email))
         cls.result = qs.order_by(cls.id).paginate(page_number, items_per_page)
-        return cls  # [model_to_dict(row) for row in data]
+        return cls
 
     @classmethod
     def counts(cls):
@@ -38,7 +39,6 @@ class BaseModel(Model):
             for row in eval(qs_expression):
                 result.append(eval('row.{0}'.format(arg)))
         return result
-
 
 
 class ShanghaiPersonInfo(BaseModel):
