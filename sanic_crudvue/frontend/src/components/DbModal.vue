@@ -1,5 +1,5 @@
 <template>
-    <el-dialog title="编辑" v-model="dialogFormVisible" :close-on-click-modal="false" :show-close="false">
+    <el-dialog title="Edit" v-model="dialogFormVisible" :close-on-click-modal="false" :show-close="false">
         <el-form :model="form">
             <el-form-item label="item_id" :label-width="formLabelWidth">
                 <el-input :disabled="true" v-model="form.id" auto-complete="off"></el-input>
@@ -24,8 +24,8 @@
 
         </el-form>
         <div slot="footer" class="dialog-footer">
-            <el-button :plain="true" type="danger" v-on:click="canclemodal">取消</el-button>
-            <el-button :plain="true" @click="updateForm(form)">保存</el-button>
+            <el-button :plain="true" type="danger" v-on:click="canclemodal">Cancel</el-button>
+            <el-button :plain="true" @click="updateForm(form)">Save</el-button>
         </div>
     </el-dialog>
 </template>
