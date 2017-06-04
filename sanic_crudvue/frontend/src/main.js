@@ -19,6 +19,8 @@ import {
 } from 'element-ui'
 import App from './App.vue'
 import 'element-ui/lib/theme-default/index.css'
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
 
 
 Vue.use(Button);
@@ -33,6 +35,8 @@ Vue.use(FormItem);
 Vue.use(Input);
 Vue.use(Dialog);
 Vue.use(Option);
+
+locale.use(lang);
 
 // eslint-disable-next-line no-new
 new Vue({
