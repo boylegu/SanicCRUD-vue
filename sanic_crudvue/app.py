@@ -1,8 +1,7 @@
 from sanic import Sanic
 from sanic_cors import CORS
 
-from crud.views import crud_bp
-from crud.models import db, ShanghaiPersonInfo
+from crud import crud_bp, db, ShanghaiPersonInfo
 from config import base_config
 
 app = Sanic(__name__)

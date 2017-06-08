@@ -2,7 +2,7 @@
 below to information is fake data or fiction data.Please don't take for reality.
 """
 
-from crud.models import ShanghaiPersonInfo
+from .models import ShanghaiPersonInfo
 
 
 # [{"id":1,"create_datetime":1495518486,"username":"baoer.gu","email":"gubaoer@hotmail.com","phone":"08613000001111","sex":"male","zone":"HongKou"}]

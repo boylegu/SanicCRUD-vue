@@ -3,7 +3,7 @@ from sanic import Blueprint
 from sanic.views import HTTPMethodView
 from playhouse.shortcuts import model_to_dict
 
-from crud.models import ShanghaiPersonInfo
+from .models import ShanghaiPersonInfo
 from .helper import list_remove_repeat
 
 crud_bp = Blueprint(
