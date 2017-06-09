@@ -10,6 +10,13 @@
                 <db-table></db-table>
 
             </el-col>
+
+            <el-col :span="24">
+                <footer class="footer">
+                    <db-footer></db-footer>
+                </footer>
+
+            </el-col>
         </el-row>
     </div>
 </template>
@@ -20,6 +27,7 @@
     import DbSidebar from './components/DbSidebar.vue'
     import DbFilterinput from './components/DbFilterinput.vue'
     import DbTable from './components/DbTable.vue'
+    import DbFooter from './components/DbFooter.vue'
 
     export default {
         name: 'app',
@@ -28,6 +36,7 @@
             DbSidebar,
             DbFilterinput,
             DbTable,
+            DbFooter
         },
     }
 
@@ -51,9 +60,11 @@
     .wrapper {
 
         position: relative;
+        height: 100%;
+        margin-top: 0px;
     }
 
-    div {
+    footer, div {
         display: block;
     }
 
@@ -71,7 +82,21 @@
     }
 
     .content {
-        padding: 25px;
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-bottom: 125px;
+        padding-left: 25px;
+    }
+
+    .footer {
+        height: 120px;
+        background-color: #324057;
+        color: #a4aebd;
+        width: 100%;
+        z-index: 1000;
+        margin-top: -120px;
+        line-height: 1;
+        font-size: 22px;
     }
 
 </style>
