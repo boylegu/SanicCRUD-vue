@@ -11,6 +11,10 @@
 
             </el-col>
 
+
+        </el-row>
+
+        <el-row>
             <el-col :span="24">
                 <footer class="footer">
                     <db-footer></db-footer>
@@ -28,11 +32,12 @@
     import DbFilterinput from './components/DbFilterinput.vue'
     import DbTable from './components/DbTable.vue'
     import DbFooter from './components/DbFooter.vue'
+    import ElRow from "element-ui/packages/row/src/row";
 
     export default {
         name: 'app',
         components: {
-            DbHeader,
+            ElRow, DbHeader,
             DbSidebar,
             DbFilterinput,
             DbTable,
@@ -50,11 +55,15 @@
 
     body {
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-        margin: 0;
+
     }
 
     .el-menu, body, html {
         height: 100%;
+        margin: 0;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .wrapper {
@@ -70,6 +79,7 @@
 
     .container {
         padding-top: 70px;
+        flex: 1;
     }
 
     .container, .wrapper {
