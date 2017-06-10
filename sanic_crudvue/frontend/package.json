@@ -14,6 +14,7 @@
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
+    "curvejs": "^0.3.3",
     "element-ui": "^1.3.5",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
