@@ -32,8 +32,6 @@
 
 
 <script>
-    import axios from 'axios'
-
     export default {
         data(){
             return {
@@ -47,7 +45,7 @@
                 let itemId = formName.id;
                 let phone = formName.phone;
                 let zone = formName.zone;
-                axios.put('http://127.0.0.1:8000/api/persons/detail/' + itemId, {
+                this.$axios.put('http://127.0.0.1:8000/api/persons/detail/' + itemId, {
                     phone: phone,
                     zone: zone
                 })

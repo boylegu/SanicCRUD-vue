@@ -24,7 +24,6 @@
 </template>
 
 <script>
-    import axios from 'axios'
     import lodash from 'lodash'
     import Bus from '../eventBus'
 
@@ -49,7 +48,7 @@
         methods: {
             selectDemo: function (params) {
                 if (params) {
-                    axios.get("http://127.0.0.1:8000/api/persons/sex")
+                    this.$axios.get("http://127.0.0.1:8000/api/persons/sex")
                         .then((response) => {
                             this.type_options = response.data;
                             console.log(response.data);
@@ -61,7 +60,7 @@
             },
             filterResultData: _.debounce(
                 function () {
-                    axios.get("http://127.0.0.1:8000/api/persons", {
+                    this.$axios.get("http://127.0.0.1:8000/api/persons", {
                         params: {
                             sex: this.formInline.sex,
                             email: this.formInline.email,

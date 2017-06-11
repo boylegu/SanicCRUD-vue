@@ -60,11 +60,8 @@
 </template>
 
 <script>
-    import axios from 'axios'
     import Bus from '../eventBus'
     import DbModal from './DbModal.vue'
-
-    import * as moment from 'moment';
 
     export default {
         data(){
@@ -102,7 +99,7 @@
             },
 
             getCustomers: function () {
-                axios.get(this.apiUrl, {
+                this.$axios.get(this.apiUrl, {
                     params: {
                         page: this.currentPage,
                         sex: this.sex,
@@ -125,7 +122,7 @@
                 this.dialogFormVisible = true;
                 const itemId = rows[index].id;
                 const idurl = 'http://127.0.0.1:8000/api/persons/detail/' + itemId;
-                axios.get(idurl).then((response) => {
+                this.$axios.get(idurl).then((response) => {
                     this.form = response.data;
                 }).catch(function (response) {
                     console.log(response)
@@ -133,7 +130,7 @@
             },
 
             formatter(row, column) {
-                let data = moment.unix(row.create_datetime);
+                let data = this.$moment.unix(row.create_datetime);
                 return data.format('YYYY-MM-DD HH:mm:ss')
             },
         }
