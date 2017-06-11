@@ -22,6 +22,7 @@ import 'element-ui/lib/theme-default/index.css'
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 
+// more grace import third package !
 import moment from 'moment'
 import axios from 'axios'
 import curvejs from 'curvejs'
