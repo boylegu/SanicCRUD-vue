@@ -1,19 +1,37 @@
 <template>
     <div class="container">
         <div class="footer-main"><p class="footer-main-title">{{ message }}</p><a
-                href="https://github.com/ElemeFE/element/issues" target="_blank" class="footer-main-link">Feedback</a><a
+                href="https://github.com/boylegu/SanicCRUD-vue" target="_blank" class="footer-main-link">Github</a><a
                 href="https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.en-US.md" target="_blank"
-                class="footer-main-link">Contribution</a><a
-                href="https://eleme.github.io/element-react/#/en-US/quick-start" target="_blank"
-                class="footer-main-link">Element-React</a></div>
+                class="footer-main-link">Email</a><a
+                href="https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.en-US.md" target="_blank"
+                class="footer-main-link">License</a></div>
 
-        <div class="layout-copy">
-            <div class='d3'>
-                <canvas id="myCanvas" width="80" height="120" style="background-color: transparent;"></canvas>
-            </div>
-            <p id="p1">2017 @gubaoer</p>
+        <div class="layout-copy elementdoc">
+
+            <i class="elementdoc">
+                <canvas id="myCanvas" width="80" height="80" style="background-color: transparent;"></canvas>
+            </i>
+            <i class="elementdoc">2017 @ Boyle.Gu 顾鲍尔. Commemorate the 6 anniversary of enter the profession </i>
         </div>
-        <div class="footer-social"></div>
+
+        <div class="footer-social">
+
+            <div class="footer-popover" style="width: 120px; display: none;">
+                <div class="footer-popover-title">饿了么 UED</div>
+                <img src="static/qrcode.a88f522.png" alt="">
+            </div>
+
+            <i class="doc-icon-weixin elementdoc">
+
+                <span>Thanks to:</span>
+                <a class="rackspace">Python & JavaScript</a>
+
+            </i>
+            
+            <i class="doc-icon-github elementdoc"></i>
+        </div>
+
     </div>
 
 </template>
@@ -25,7 +43,7 @@
     export default {
         data(){
             return {
-                message: 'SanicCRUD-vue_0.1 By BoyleGu',
+                message: 'SanicCRUD-Vue.js v0.1',
             }
         },
 
@@ -38,7 +56,7 @@
 
             let curve = new Curve({
                 color: '#ffaeac',
-                data: {value: 0, step: 0.01, width: 90, height: 80},
+                data: {value: 0, step: 0.01, width: 80, height: 80},
                 motion: motion.noise
             });
             stage.add(curve);
@@ -62,6 +80,10 @@
         margin: 0 auto;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .footer-main {
         font-size: 0;
         padding-top: 40px;
@@ -82,23 +104,50 @@
         color: #768193;
     }
 
-    .layout-copy p {
-        width: 100%;
+    .layout-copy {
+        display: inline-block;
+        width: 570px;
+        height: 80px;
+        margin-left: 3px;
+    }
+
+    .layout-copy .elementdoc {
         display: inline-block;
         text-align: center;
-        position: relative;
-        top: -142px;
+        color: #8d99ab;
+        width: 570px;
+        vertical-align: middle;
         font-size: 12px;
-
     }
 
-    .d3 {
-        width: 100%;
+    .footer-social {
+        float: right;
+        line-height: 120px;
+    }
+
+    .footer-popover {
+        padding: 0;
+        min-width: 120px;
+        line-height: normal;
+        box-shadow: 0 0 11px 0 rgba(174, 187, 211, .24);
+    }
+
+    .elementdoc span {
+        font-size: 14px;
         display: inline-block;
-        text-align: center;
         position: relative;
-        top: -80px;
+        top: -28px;
+        margin-right: 1px;
+
+        padding-right: 12px;
+        white-space: nowrap;
     }
+
+    .elementdoc a {
+        font-size: 14px;
+
+    }
+
 
 
 </style>

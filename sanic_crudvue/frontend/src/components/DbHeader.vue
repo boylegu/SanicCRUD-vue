@@ -1,6 +1,7 @@
 <template>
     <header style="background-color: rgb(10, 47, 88);">
         <div class="text-logo">{{msg}}</div>
+        <p class="meta">This demo project for express new develop model.</p>
         <ul class="header-operations">
         </ul>
     </header>
@@ -29,8 +30,6 @@
         box-sizing: border-box;
     }
 
-
-
     .text-logo {
         display: inline-block;
         vertical-align: middle;
@@ -41,5 +40,14 @@
         font-size: 25px;
         color: white;
 
+    }
+
+    .meta {
+        color: #7e95c5;
+        width: 200px;
+        display: block;
+        margin: -5px 0 0 225px;
+        font-weight: 700;
+        font-size: 0.3rem;
     }
 </style>

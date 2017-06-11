@@ -55,22 +55,19 @@
 
     body {
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-
+        margin: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
     }
 
     .el-menu, body, html {
         height: 100%;
-        margin: 0;
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
     }
 
     .wrapper {
 
         position: relative;
-        height: 100%;
-        margin-top: 0px;
     }
 
     footer, div {
