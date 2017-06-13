@@ -16,8 +16,6 @@ app.blueprint(crud_bp)
 settings = dict(MAX_PER_PAGE=5)
 app.config.update(settings)
 
-app.config.update(settings)
-
 put_data = {'phone': '08613000001111'}
 filter_params = {'sex': 'male', 'email': 'qq.com'}
 
