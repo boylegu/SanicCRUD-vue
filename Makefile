@@ -1,5 +1,5 @@
 # author: baoer.gu
-# makefile of sunflower __2017-06-13 in Shanghai HongKou District
+# makefile of sanic_crud_vue __2017-06-13 in Shanghai HongKou District
 
 proj_server := "app.py"
 proj_path := $(shell pwd)
