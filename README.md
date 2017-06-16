@@ -18,7 +18,7 @@ Convenient & efficient and better performance for new Python full stack.
 
 <p align="right" style="color: #3399FF">———————By Boyle Gu</p>
 
-## Chinese README[中文]
+### [Chinese README[中文]](https://github.com/boylegu/SanicCRUD-vue/blob/master/README-CN.md)
 
 ## overview
 ====
