@@ -17,3 +17,8 @@ node_modules
 
 # unit test
 .cache
+
+# design logo
+*.lpop
+未命名
+*.png

@@ -1,7 +1,7 @@
 <template>
     <header style="background-color: rgb(10, 47, 88);">
         <div class="text-logo">{{msg}}</div>
-        <p class="meta">This demo project for express new develop model.</p>
+        <p class="meta">This demo project for express new develop practice demo.</p>
         <ul class="header-operations">
         </ul>
     </header>

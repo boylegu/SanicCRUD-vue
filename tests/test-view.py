@@ -1,6 +1,5 @@
 """
     sanic-crud-vue is a simple example demo with Vue 2.x. I hope pass thought this project for express new develop model.
-    origin resource sharing (CORS) using a simple decorator.
     :copyright: (c) 2017 by Boyle Gu
     :license: MIT, see LICENSE for more details
 
