@@ -6,6 +6,7 @@
     "webpack": "^2.4.1"
   },
   "devDependencies": {
+    "apidoc": "^0.17.6",
     "autoprefixer": "^7.0.1",
     "axios": "^0.16.2",
     "babel-core": "^6.24.1",

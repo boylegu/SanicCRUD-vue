@@ -13,6 +13,35 @@ crud_bp = Blueprint(
 
 
 class PersonsInfoListView(HTTPMethodView):
+
+    """
+    @api {GET} /api/persons   Get all or a part of person info
+    @apiName GetAllInfoList
+    @apiGroup Info Manage
+    @apiVersion 1.0.0
+
+    @apiExample {httpie} Example usage: (support combinatorial search)
+
+    All person：
+    http /api/persons
+
+    You can according to 'sex | email' or 'sex & email'
+    http /api/persons?sex=xxx&email=xx
+    http /api/persons?sex=xxx
+    http /api/persons?email=xx
+
+    @apiParam {String} sex
+    @apiParam {String} email
+
+    @apiSuccess {String} create_datetime
+    @apiSuccess {String} email
+    @apiSuccess {String} id
+    @apiSuccess {String} phone
+    @apiSuccess {String} sex
+    @apiSuccess {String} username
+    @apiSuccess {String} zone
+
+    """
     async def get(self, request):
         max_per_page = request.app.config['MAX_PER_PAGE']
         page = int(request.args.get('page', 1))
@@ -32,6 +61,48 @@ class PersonsInfoListView(HTTPMethodView):
 
 
 class PersonsInfoDetailView(HTTPMethodView):
+
+    """
+    @api {GET} /api/persons/detail/:id  details info
+    @apiName GetPersonDetails
+    @apiGroup Info Manage
+    @apiVersion 1.0.0
+
+    @apiExample {httpie} Example usage:
+
+    http /api/persons/detail/1
+
+    @apiSuccess {String} create_datetime
+    @apiSuccess {String} email
+    @apiSuccess {String} id
+    @apiSuccess {String} phone
+    @apiSuccess {String} sex
+    @apiSuccess {String} username
+    @apiSuccess {String} zone
+
+
+    """
+
+    """
+    @api {PUT} /api/persons/detail/:id  update person info
+    @apiName PutPersonDetails
+    @apiGroup Info Manage
+    @apiVersion 1.0.0
+
+    @apiExample {httpie} Example usage:
+
+    http /api/persons/detail/1
+
+    @apiSuccess {String} create_datetime
+    @apiSuccess {String} email
+    @apiSuccess {String} id
+    @apiSuccess {String} phone
+    @apiSuccess {String} sex
+    @apiSuccess {String} username
+    @apiSuccess {String} zone
+
+    """
+
     async def get(self, request, item_id):
         data = ShanghaiPersonInfo.get(id=item_id)
         return json(model_to_dict(data))
@@ -45,6 +116,21 @@ class PersonsInfoDetailView(HTTPMethodView):
 
 
 class SexListView(HTTPMethodView):
+
+    """
+    @api {GET} /api/persons/sex Get all sexList
+    @apiName GetAllSexList
+    @apiGroup Info Manage
+    @apiVersion 1.0.0
+
+    @apiExample {httpie} Example usage:
+
+    http /api/persons/sex
+
+    @apiSuccess {String} label
+    @apiSuccess {String} value
+
+    """
     async def get(self, request):
         unique_list = list_remove_repeat(ShanghaiPersonInfo.values_list('sex'))
         result = [dict(label=i, value=i) for i in unique_list]
