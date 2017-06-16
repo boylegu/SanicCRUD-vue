@@ -83,7 +83,7 @@ Sometimes a huge amount of write/reade as Database invite costly.So use orm is v
 
 This's a sample ShangHai people information system as example demo.
 
-![](http://i2.muimg.com/536217/177529698559e30e.gif)
+![](http://i1.buimg.com/536217/09373dedc2d0b546.gif)
 
 ## The project structure
 
