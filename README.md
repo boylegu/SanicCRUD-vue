@@ -127,6 +127,8 @@ This's a sample ShangHai people information system as example demo.
 
   - Add interface documents about it's rest-api
 
+  - Pagination implementation of RestFul-API with peewee and sanic
+
 - VueJS & webpack (front-end)
 
   - Follow ECMAScript 6
@@ -140,6 +142,8 @@ This's a sample ShangHai people information system as example demo.
   - How grace import third JS package in vue
   
   - Handle format datetime
+  
+  - Pagination implementation
   
   - Reusable components
   
