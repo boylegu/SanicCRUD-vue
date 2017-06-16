@@ -83,7 +83,8 @@ Sometimes a huge amount of write/reade as Database invite costly.So use orm is v
 
 This's a sample ShangHai people information system as example demo.
 
-![](http://i1.buimg.com/536217/09373dedc2d0b546.gif)
+
+[![MIT](https://github.com/boylegu/SanicCRUD-vue/blob/master/image/demo_image.gif?raw=true)]()
 
 ## The project structure
 
