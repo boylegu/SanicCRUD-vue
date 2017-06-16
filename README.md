@@ -21,7 +21,7 @@ Convenient & efficient and better performance for new Python full stack.
 ### [Chinese README[中文]](https://github.com/boylegu/SanicCRUD-vue/blob/master/README-CN.md)
 
 ## overview
-====
+
 This‘s a CRUD demo example base Sanic with Vue2 + webpack2. I hope pass thought this project for express new Python full stack base web practice.
 
 
