@@ -1,5 +1,5 @@
 ## SanicCRUD-vue
-====
+
 Sanic ＋ 前端MVVM 一种新一代Python高性能全栈开发实践
 
 <p align="center">
