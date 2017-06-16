@@ -84,7 +84,7 @@ Sometimes a huge amount of write/reade as Database invite costly.So use orm is v
 This's a sample ShangHai people information system as example demo.
 
 
-[![MIT](https://github.com/boylegu/SanicCRUD-vue/blob/master/image/demo_image.gif?raw=true)]()
+[![demo-image](https://github.com/boylegu/SanicCRUD-vue/blob/master/image/demo_image.gif?raw=true)]()
 
 ## The project structure
 
@@ -221,7 +221,7 @@ This project can be reference,study or teaching demonstration. After, I will upd
 3. You can also join to QQ Group: 315308272
 
 ## Summarize
- 
+
 
 ## My Final Thoughts
 
