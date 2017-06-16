@@ -73,7 +73,7 @@ Webpack提供了一整套前端工程自动化的解决方案
 一个简单的“上海人员信息查询系统”作为例子
 
 
-[![demo-image](http://i2.muimg.com/536217/177529698559e30e.gif)]()
+[![demo-image](https://github.com/boylegu/SanicCRUD-vue/blob/master/image/demo_image.gif?raw=true)]()
 
 ## 项目结构
 
@@ -169,6 +169,8 @@ Webpack提供了一整套前端工程自动化的解决方案
 
 - 构建后端环境
 
+        cd SanicCRUD-vue
+
         make install
 
 - 构建前端环境
@@ -201,6 +203,7 @@ Webpack提供了一整套前端工程自动化的解决方案
 2. 引入更高级的vuex组件通信机制
 3. 演示vue-route的使用
 4. 加入docker部署环境
+5. 新增针对yarn的支持
 ... ...
 
 ## 技术、教学支持
@@ -211,7 +214,6 @@ Webpack提供了一整套前端工程自动化的解决方案
 2. 电子邮件的形式 gubaoer@hotmail.com
 3. QQ群：315308272
 
-## 
 
 ## My Final Thoughts
 

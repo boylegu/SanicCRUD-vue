@@ -190,6 +190,8 @@ This's a sample ShangHai people information system as example demo.
 
 - Run back-end server
 
+        cd SanicCRUD-vue
+
         make dev
 
 - Run Front-end Web Page
@@ -210,6 +212,7 @@ This project can be reference,study or teaching demonstration. After, I will upd
 2. state manage with vuex
 3. use vue-route
 4. add docker deploy method
+5. support yarn
 ... ...
 
 ## Support
@@ -219,8 +222,6 @@ This project can be reference,study or teaching demonstration. After, I will upd
 2. To e-mail: gubaoer@hotmail.com
 
 3. You can also join to QQ Group: 315308272
-
-## Summarize
 
 
 ## My Final Thoughts
