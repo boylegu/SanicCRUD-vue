@@ -131,7 +131,7 @@ This's a sample ShangHai people information system as example demo.
 
 - VueJS & webpack (front-end)
 
-  - Follow ECMAScript 6
+  - Follow ECMAScript 6
 
   - What about coding by single file components in vueJS
   
@@ -206,7 +206,11 @@ This's a sample ShangHai people information system as example demo.
 
 - Unit test
 
+        cd SanicCRUD-vue
+
         make test
+
+> You can also run `cd sanic_crudvue/frontend;npm run build` and it's with Nginx in the production environment
 
 ## Future Plan
 
