@@ -61,7 +61,7 @@ Vue.js是MVVM设计模式中目前最火热的一个前端框架之一，除了�
   <a href ="##"><img style="box-shadow: 8px 8px 5px #888888;"alt="sanic_vue" src="http://i2.muimg.com/536217/5ae4b10becac44b0.png"></a>
 
 ### Webpack是什么
-Webpack提供了一整套前端工程自动化的解决方案
+Webpack提供了一整套前端工程自动化的解决方案
 
 ### peewee是什么
 
