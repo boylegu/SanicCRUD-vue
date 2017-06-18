@@ -30,5 +30,5 @@ LOGO = """
   - ▌                            (o)          ▀ 
  /- ▌            Go Go Go !               ▀ ▀              Author:Boyle Gu{0}
  /  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀                   Version 0.1  
-               ██
+               ██                                          Our Freedom ~~
 """

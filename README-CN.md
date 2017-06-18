@@ -197,7 +197,11 @@ Webpack提供了一整套前端工程自动化的解决方案
 
 - 运行单元测试
 
+        cd SanicCRUD-vue
+
         make test
+        
+> 你也可以在生产环境中运行`cd sanic_crudvue/frontend;npm run build`进行编译并配合Nginx
         
 ## 未来计划
 
