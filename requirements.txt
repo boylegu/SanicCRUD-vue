@@ -2,3 +2,4 @@ sanic==0.5.4
 Sanic-Cors==0.5.4.1
 peewee==2.10.1
 pytest==3.1.1
+AoikLiveReload==0.1.0

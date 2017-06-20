@@ -125,6 +125,8 @@ This's a sample ShangHai people information system as example demo.
 
   - Unit test on Sanic
 
+  - Support hot reload in Sanic
+
   - Add interface documents about it's rest-api
 
   - Pagination implementation of RestFul-API with peewee and sanic
