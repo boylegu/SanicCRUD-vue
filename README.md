@@ -233,6 +233,9 @@ This project can be reference,study or teaching demonstration. After, I will upd
 
 3. You can also join to QQ Group: 315308272
 
+## Related projects
+
+- [SpringBoot-vue for Java](https://github.com/boylegu/SpringBoot-vue)
 
 ## My Final Thoughts
 

@@ -224,6 +224,8 @@ Webpack提供了一整套前端工程自动化的解决方案
 2. 电子邮件的形式 gubaoer@hotmail.com
 3. QQ群：315308272
 
+## 相关项目
+- [SpringBoot-vue for Java](https://github.com/boylegu/SpringBoot-vue)
 
 ## My Final Thoughts
 
