@@ -4,11 +4,12 @@
         <el-row class="container">
             <el-col :span="4" class="menu">
                 <db-sidebar></db-sidebar>
+
+
             </el-col>
             <el-col :span="20" class="content">
-                <db-filterinput></db-filterinput>
-                <db-table></db-table>
-
+                <router-view class="view one" name="one"></router-view>
+                <router-view class="view two" name="two"></router-view>
             </el-col>
 
 
@@ -29,19 +30,17 @@
 
     import DbHeader  from './components/DbHeader.vue'
     import DbSidebar from './components/DbSidebar.vue'
-    import DbFilterinput from './components/DbFilterinput.vue'
-    import DbTable from './components/DbTable.vue'
     import DbFooter from './components/DbFooter.vue'
+
     import ElRow from "element-ui/packages/row/src/row";
 
     export default {
         name: 'app',
         components: {
-            ElRow, DbHeader,
+            ElRow,
+            DbHeader,
             DbSidebar,
-            DbFilterinput,
-            DbTable,
-            DbFooter
+            DbFooter,
         },
     }
 

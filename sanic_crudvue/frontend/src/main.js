@@ -3,6 +3,7 @@
  */
 
 import Vue from 'vue'
+import Router from './router';
 import {
     Button,
     Select,
@@ -15,7 +16,9 @@ import {
     FormItem,
     Input,
     Dialog,
-    Option
+    Option,
+    Menu,
+    MenuItem
 } from 'element-ui'
 import App from './App.vue'
 import 'element-ui/lib/theme-default/index.css'
@@ -43,6 +46,9 @@ Vue.use(FormItem);
 Vue.use(Input);
 Vue.use(Dialog);
 Vue.use(Option);
+Vue.use(Menu);
+Vue.use(MenuItem);
+
 
 locale.use(lang);
 
@@ -50,6 +56,7 @@ locale.use(lang);
 
 // eslint-disable-next-line no-new
 new Vue({
+    router: Router,
     el: '#app',
     render: h => h(App)
 });
