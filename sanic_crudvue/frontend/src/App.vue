@@ -30,10 +30,7 @@
 
     import DbHeader  from './components/DbHeader.vue'
     import DbSidebar from './components/DbSidebar.vue'
-    import DbFilterinput from './components/DbFilterinput.vue'
-    import DbTable from './components/DbTable.vue'
     import DbFooter from './components/DbFooter.vue'
-    import DbMap from './components/DbMap.vue'
 
     import ElRow from "element-ui/packages/row/src/row";
 
@@ -43,10 +40,7 @@
             ElRow,
             DbHeader,
             DbSidebar,
-            //DbFilterinput,
-            //DbTable,
             DbFooter,
-            //DbMap
         },
     }
 
